@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fx_prj_test_flutter_app/login_screen/login_screen.dart';
 
 class OnboardScreen extends StatefulWidget{
   OnboardScreenState createState() => OnboardScreenState();
@@ -180,7 +181,12 @@ class OnboardScreenState extends State<OnboardScreen>{
         width: double.infinity,
         color: Colors.white,
         child: GestureDetector(
-          onTap: () => print('Get started'),
+          onTap: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LoginScreen()),
+            );
+          },
           child: Center(
             child: Padding(
               padding: EdgeInsets.only(bottom: 10.0),
